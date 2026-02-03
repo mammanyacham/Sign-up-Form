@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+    background: url("/src/assets/images/bg-intro-mobile.png");    
+    background-color: hsl(0, 100%, 74%);
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+h1, p{
+    text-align: center;
+    color: white;
+}
+
+.purple-note{
+    margin-bottom: 20px;
+    margin-top: 35px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 2px hsla(249, 10%, 26%, 0.3) ;
+}
+
+.purple-note p{
+    width: 60%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    margin-bottom: 40px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 2px hsla(249, 10%, 26%, 0.3);
+    background-color: white;
+}
+
+form > input, button{
+    width: 80%;
+    height: 47px;
+    padding-left: 7px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+form > input{
+    border: 1px solid hsla(249, 10%, 26%, 0.5);
+}
+
+button{
+    border: none;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+}
+
+form  p{
+    color: hsl(249, 10%, 26%, 0.5);
+    width: 80%;
+}
+
+form span{
+    color: red;
+}
+
+@media (min-width: 500px) {
+    main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+
+    }
+
+    div.intro-div{
+        width: 400px;
+    }
+
+    .intro  {
+        text-align: left;
+    }
+
+    form{
+        width: 500px;
+    }
+
+    
+
+  
+}
