@@ -2,6 +2,7 @@ body{
     margin: 0px;
     background: url("/src/assets/images/bg-intro-mobile.png");    
     background-color: hsl(0, 100%, 74%);
+    font-family: poppins, sans-serif;
 }
 
 #root{
@@ -18,7 +19,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
 }
 
 h1, p{
@@ -39,6 +40,12 @@ h1, p{
 
 .purple-note p{
     width: 60%;
+    
+}
+
+.purple-note > p > span{
+    color: hsl(246, 25%, 77%);
+    
 }
 
 form{
@@ -82,7 +89,7 @@ form span{
     color: red;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
     main{
         display: flex;
         flex-direction: row;
@@ -103,7 +110,10 @@ form span{
         width: 500px;
     }
 
-    
+    .purple-note{
+        padding: 0px;    
+        border-radius: 8px;
+    }
 
   
 }
