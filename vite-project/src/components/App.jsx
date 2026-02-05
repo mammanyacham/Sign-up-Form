@@ -51,6 +51,13 @@ export default function App() {
          }
     }
     
+/*
+ const styles = 
+ errors.firstName ? {border: "2px solid red" } : undefined;
+ errors.lastName ? {border: "2px solid red" } : undefined;
+ errors.email ? {border: "2px solid red" } : undefined;
+ errors.password ? {border: "2px solid red" } : undefined;
+ */
 
 return(
     <main>
@@ -67,23 +74,35 @@ return(
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <input placeholder="First Name" 
-                    name="firstName" onChange={handleChange} value={formData.firstName} type="text"/>
-                    <img src={errorIcon} alt="Error Icon"/>
-                    {errors.firstName && <p>{errors.firstName}</p>}
+                    name="firstName" onChange={handleChange} value={formData.firstName} type="text" style={errors.firstName ? {border: "2px solid red" } : undefined}/>
+                    {errors.firstName && <img src={errorIcon} alt="Error Icon"/>}
+                    {errors.firstName && <p className="err-msg">{errors.firstName}</p>}
                 </div>
                
-                <input placeholder="Last Name" onChange={handleChange} 
-                name="lastName" value={formData.lastName} type="text"/>
-                 {errors.lastName && <p>{errors.lastName}</p>}
+               <div className="input-group">
+                    <input placeholder="Last Name" onChange={handleChange} 
+                    name="lastName" value={formData.lastName} type="text"style={errors.lastName ? {border: "2px solid red" } : undefined}/>
+                    {errors.lastName &&  <img src={errorIcon} alt="Error Icon"/>}
+                    {errors.lastName && <p className="err-msg">{errors.lastName}</p>}
+                </div>
 
-                <input placeholder="Email Address"  onChange={handleChange} value={formData.email}
-                name="email" type="email"/>
-                 {errors.email && <p>{errors.email}</p>}
 
-                <input placeholder="Password" onChange={handleChange} name="password" value={formData.password} type="password"/>
-                {errors.password && <p>{errors.password}</p>}
+                <div className="input-group">
+                    <input placeholder="Email Address"  onChange={handleChange} value={formData.email}
+                    name="email" type="email" style={errors.email ? {border: "2px solid red" } : undefined}/>
+                     {errors.email && <img src={errorIcon} alt="Error Icon"/>}
+                    {errors.email && <p className="err-msg">{errors.email}</p>}
+                 </div>
 
-                <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                <div className="input-group">
+                    <input placeholder="Password" onChange={handleChange} name="password" value={formData.password} type="password" style={errors.password ? {border: "2px solid red" } : undefined}/>
+                     {errors.password && <img src={errorIcon} alt="Error Icon"/>}
+                    {errors.password && <p className="err-msg">{errors.password}</p>}
+                </div>
+
+                
+                     <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                
                  
 
 

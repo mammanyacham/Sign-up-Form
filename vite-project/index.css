@@ -61,7 +61,16 @@ form{
     background-color: white;
 }
 
-form > input, button{
+.input-group > input{
+    font-family: poppins, sans-serif;
+    height: 47px;
+    padding-left: 7px;
+    border-radius: 5px;
+    outline: none;
+    width: 97%;
+}
+
+form > button{
     width: 80%;
     height: 47px;
     padding-left: 7px;
@@ -97,6 +106,14 @@ form span{
 .input-group img{
     position: absolute;
     right: 10px;
+    top: 20%;
+}
+
+.err-msg{
+    text-align: left;
+    color: hsl(0, 100%, 74%);
+    margin: 0px;
+    font-size: 12px;
 }
 
 @media (min-width: 700px) {
