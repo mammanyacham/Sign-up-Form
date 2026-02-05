@@ -89,6 +89,16 @@ form span{
     color: red;
 }
 
+.input-group{
+    position: relative;
+    width: 80%;
+}
+
+.input-group img{
+    position: absolute;
+    right: 10px;
+}
+
 @media (min-width: 700px) {
     main{
         display: flex;
