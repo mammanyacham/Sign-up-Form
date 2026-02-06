@@ -79,7 +79,7 @@ form > button{
 
 }
 
-form > input{
+.input-group > input{
     border: 1px solid hsla(249, 10%, 26%, 0.5);
 }
 
